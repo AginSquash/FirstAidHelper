@@ -3,7 +3,17 @@ from PyQt5 import QtWidgets
 
 # UI_generated
 import HelpScreen
+import MainScreen
 
+class MainMenu(QtWidgets.QMainWindow, MainScreen.Ui_MainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.pushButton.clicked.connect(self.closeWindow)
+
+    def closeWindow(self):
+        self.close()
+        
 
 class FirstAidHelper(QtWidgets.QMainWindow, HelpScreen.Ui_MainWindow):
     def __init__(self):
@@ -29,6 +39,11 @@ class FirstAidHelper(QtWidgets.QMainWindow, HelpScreen.Ui_MainWindow):
         json_request = json_request.replace("$symptom", symptom)
 
         print(json_request)
+
+        self.close()
+        self.mainmenu = MainMenu()
+        self.mainmenu.show()
+
 
 def main():
     app = QtWidgets.QApplication(sys.argv)

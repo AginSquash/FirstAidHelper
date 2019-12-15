@@ -1,5 +1,6 @@
 #!/bin/bash
 
 pyuic5 UI/HelpScreen.ui -o HelpScreen.py
+pyuic5 UI/MainScreen.ui -o MainScreen.py
 
 echo OK
