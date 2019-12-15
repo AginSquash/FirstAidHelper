@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pyuic5 UI/HelpScreen.ui -o HelpScreen.py
+
+echo OK
