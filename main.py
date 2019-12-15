@@ -34,9 +34,7 @@ class FirstAidHelper(QtWidgets.QMainWindow, HelpScreen.Ui_MainWindow):
         }
         '''
 
-        json_request = json_request.replace("$name", name)
-        json_request = json_request.replace("$adress", adress)
-        json_request = json_request.replace("$symptom", symptom)
+        json_request = json_request.replace("$name", name).replace("$adress", adress).replace("$symptom", symptom)
 
         print(json_request)
 
