@@ -1,11 +1,12 @@
 import sys
 
-from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel
 from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow
 
 # UI_generated
 import HelpScreen
 import MainScreen
+
 
 class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
     def __init__(self):
