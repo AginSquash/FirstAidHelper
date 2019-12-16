@@ -13,17 +13,6 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
         self.setupUi(self)
         self.pushButton.clicked.connect(self.closeWindow)
 
-    def load_image(self, file_name):
-        pixmap = QPixmap(file_name)
-
-        ##self.label = QLabel(self)
-        self.label.setPixmap(pixmap)
-        self.label.resize(200, 200)
-
-
-        self.resize(200, 200)
-        
-
     def closeWindow(self):
         self.close()
         
@@ -53,7 +42,6 @@ class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
 
         self.close()
         self.mainmenu = MainMenu()
-        self.mainmenu.load_image("img/black-magic.gif")
         self.mainmenu.show()
 
 

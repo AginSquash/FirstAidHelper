@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>black-magic.gif</file>
+    <file>persik.jpg</file>
+  </qresource>
+</RCC>

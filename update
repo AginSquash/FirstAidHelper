@@ -3,4 +3,6 @@
 pyuic5 UI/HelpScreen.ui -o HelpScreen.py
 pyuic5 UI/MainScreen.ui -o MainScreen.py
 
+pyrcc5 img/resources.qrc -o resources_rc.py
+
 echo OK

@@ -22,7 +22,13 @@ class Ui_MainWindow(object):
         self.pushButton.setGeometry(QtCore.QRect(140, 290, 113, 32))
         self.pushButton.setObjectName("pushButton")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(160, 270, 60, 16))
+        self.label.setGeometry(QtCore.QRect(100, 60, 200, 200))
+        self.label.setAutoFillBackground(False)
+        self.label.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap(":/newPrefix/black-magic.gif"))
+        self.label.setScaledContents(True)
+        self.label.setWordWrap(False)
         self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -36,4 +42,4 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "PushButton"))
-        self.label.setText(_translate("MainWindow", "TextLabel"))
+import resources_rc
