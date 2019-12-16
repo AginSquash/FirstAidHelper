@@ -1,21 +1,34 @@
 import sys
-from PyQt5 import QtWidgets
+
+from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel
+from PyQt5.QtGui import QPixmap
 
 # UI_generated
 import HelpScreen
 import MainScreen
 
-class MainMenu(QtWidgets.QMainWindow, MainScreen.Ui_MainWindow):
+class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.pushButton.clicked.connect(self.closeWindow)
 
+    def load_image(self, file_name):
+        pixmap = QPixmap(file_name)
+
+        ##self.label = QLabel(self)
+        self.label.setPixmap(pixmap)
+        self.label.resize(200, 200)
+
+
+        self.resize(200, 200)
+        
+
     def closeWindow(self):
         self.close()
         
 
-class FirstAidHelper(QtWidgets.QMainWindow, HelpScreen.Ui_MainWindow):
+class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -40,11 +53,12 @@ class FirstAidHelper(QtWidgets.QMainWindow, HelpScreen.Ui_MainWindow):
 
         self.close()
         self.mainmenu = MainMenu()
+        self.mainmenu.load_image("img/black-magic.gif")
         self.mainmenu.show()
 
 
 def main():
-    app = QtWidgets.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     window = FirstAidHelper()
     window.show()
     app.exec()
