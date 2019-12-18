@@ -12,10 +12,12 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.pushButton.clicked.connect(self.closeWindow)
+        self.pushFAH_button.clicked.connect(self.OpenFAH)
 
-    def closeWindow(self):
+    def OpenFAH(self):
         self.close()
+        self.fah = FirstAidHelper()
+        self.fah.show()
         
 
 class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
@@ -46,9 +48,10 @@ class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
         self.mainmenu.show()
 
 
+
 def main():
     app = QApplication(sys.argv)
-    window = FirstAidHelper()
+    window = MainMenu()
     window.show()
     app.exec()
 

@@ -18,9 +18,9 @@ class Ui_MainWindow(object):
         MainWindow.setMaximumSize(QtCore.QSize(400, 600))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(140, 290, 113, 32))
-        self.pushButton.setObjectName("pushButton")
+        self.pushFAH_button = QtWidgets.QPushButton(self.centralwidget)
+        self.pushFAH_button.setGeometry(QtCore.QRect(100, 510, 181, 61))
+        self.pushFAH_button.setObjectName("pushFAH_button")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(100, 60, 200, 200))
         self.label.setAutoFillBackground(False)
@@ -41,5 +41,5 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        self.pushFAH_button.setText(_translate("MainWindow", "Get First Help Online!"))
 import resources_rc
