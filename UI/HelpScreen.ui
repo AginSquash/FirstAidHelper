@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>600</height>
+    <width>375</width>
+    <height>790</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>400</width>
-    <height>600</height>
+    <width>375</width>
+    <height>790</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>400</width>
-    <height>600</height>
+    <width>375</width>
+    <height>790</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -29,11 +29,19 @@
    <widget class="QPushButton" name="button">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>540</y>
+      <x>200</x>
+      <y>720</y>
       <width>113</width>
       <height>32</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
     </property>
     <property name="text">
      <string>Отправить</string>
@@ -42,9 +50,9 @@
    <widget class="QPlainTextEdit" name="name_in">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>40</y>
-      <width>361</width>
+      <width>351</width>
       <height>31</height>
      </rect>
     </property>
@@ -52,9 +60,9 @@
    <widget class="QPlainTextEdit" name="adress_in">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>110</y>
-      <width>361</width>
+      <width>351</width>
       <height>31</height>
      </rect>
     </property>
@@ -62,10 +70,10 @@
    <widget class="QPlainTextEdit" name="symptom_in">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>180</y>
-      <width>361</width>
-      <height>351</height>
+      <width>351</width>
+      <height>531</height>
      </rect>
     </property>
    </widget>
@@ -106,6 +114,19 @@
     </property>
     <property name="text">
      <string>Опишите, что с вами произошло:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_goBack">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>720</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Назад</string>
     </property>
    </widget>
   </widget>

@@ -21,6 +21,9 @@ class Ui_QuickHelper(object):
         self.listWidget = QtWidgets.QListWidget(self.centralwidget)
         self.listWidget.setGeometry(QtCore.QRect(10, 10, 381, 531))
         self.listWidget.setObjectName("listWidget")
+        self.pushBackButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushBackButton.setGeometry(QtCore.QRect(140, 550, 113, 32))
+        self.pushBackButton.setObjectName("pushBackButton")
         QuickHelper.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(QuickHelper)
         self.statusbar.setObjectName("statusbar")
@@ -32,3 +35,4 @@ class Ui_QuickHelper(object):
     def retranslateUi(self, QuickHelper):
         _translate = QtCore.QCoreApplication.translate
         QuickHelper.setWindowTitle(_translate("QuickHelper", "QuickHelper"))
+        self.pushBackButton.setText(_translate("QuickHelper", "Back"))
