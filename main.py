@@ -40,7 +40,7 @@ class OpenQuickHelper(QMainWindow, QuickHelper.Ui_QuickHelper):
         self.list = self.listWidget
 
         for n in range(100):
-            self.list.addItem(str(n))
+            self.list.addItem(str(n) + " НЕКОТОРЫЙ БОЛЬШОЙ ТЕКСТ КОТОРЫЙ НЕ ПОМЕСТИТЬСЯ В ОДНУ СТРОКУ")
 
         self.list.itemActivated.connect(self.itemActivated_event)
 

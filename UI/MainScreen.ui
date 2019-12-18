@@ -70,14 +70,23 @@
    <widget class="QPushButton" name="pushQH_button">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>540</y>
-      <width>181</width>
-      <height>71</height>
+      <x>0</x>
+      <y>0</y>
+      <width>71</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Get Qucik Help!</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <selectedoff>:/newPrefix/void.png</selectedoff>
+      <selectedon>:/newPrefix/void.png</selectedon>
+     </iconset>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="background_label">

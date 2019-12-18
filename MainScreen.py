@@ -36,7 +36,13 @@ class Ui_MainWindow(object):
         self.pushFAH_button.setFlat(True)
         self.pushFAH_button.setObjectName("pushFAH_button")
         self.pushQH_button = QtWidgets.QPushButton(self.centralwidget)
-        self.pushQH_button.setGeometry(QtCore.QRect(100, 540, 181, 71))
+        self.pushQH_button.setGeometry(QtCore.QRect(0, 0, 71, 61))
+        self.pushQH_button.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/newPrefix/void.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/newPrefix/void.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        self.pushQH_button.setIcon(icon1)
+        self.pushQH_button.setFlat(True)
         self.pushQH_button.setObjectName("pushQH_button")
         self.background_label = QtWidgets.QLabel(self.centralwidget)
         self.background_label.setGeometry(QtCore.QRect(0, 0, 375, 770))
@@ -64,5 +70,4 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushQH_button.setText(_translate("MainWindow", "Get Qucik Help!"))
 import resources_rc
