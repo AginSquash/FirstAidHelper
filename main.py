@@ -8,7 +8,7 @@ from PyQt5.Qt import pyqtSignal, QLabel
 import HelpScreen
 import MainScreen
 import QuickHelper
-
+import Reader
 
 class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
     def __init__(self):
@@ -28,7 +28,19 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
         self.close()
         self.fah = FirstAidHelper()
         self.fah.show()
-        
+
+class ReaderWindow(QMainWindow, Reader.Ui_Reader):
+    def __init__(self, text):
+        super().__init__()
+        self.setupUi(self)
+        self.push_goBack.clicked.connect(self.openList)
+        self.textBrowser.setText(text)
+
+    def openList(self):
+        self.close()
+        self.QH = OpenQuickHelper()
+        self.QH.show()
+
 class OpenQuickHelper(QMainWindow, QuickHelper.Ui_QuickHelper):
     def __init__(self):
         super().__init__()
@@ -40,12 +52,16 @@ class OpenQuickHelper(QMainWindow, QuickHelper.Ui_QuickHelper):
         self.list = self.listWidget
 
         for n in range(100):
-            self.list.addItem(str(n) + " НЕКОТОРЫЙ БОЛЬШОЙ ТЕКСТ КОТОРЫЙ НЕ ПОМЕСТИТЬСЯ В ОДНУ СТРОКУ")
+            self.list.addItem(str(n) + " Название какой-то болезни")
 
         self.list.itemActivated.connect(self.itemActivated_event)
 
     def itemActivated_event(self, item):
         print(item.text())
+
+        self.close()
+        self.rd = ReaderWindow( text= item.text() )
+        self.rd.show()
 
     def toMainMenu(self):
         self.close()
@@ -86,7 +102,6 @@ class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
         self.close()
         self.mainmenu = MainMenu()
         self.mainmenu.show()
-
 
 def main():
     app = QApplication(sys.argv)

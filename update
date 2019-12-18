@@ -3,6 +3,7 @@
 pyuic5 UI/HelpScreen.ui -o HelpScreen.py
 pyuic5 UI/MainScreen.ui -o MainScreen.py
 pyuic5 UI/QuickHelper.ui -o QuickHelper.py
+pyuic5 UI/Reader.ui -o Reader.py
 
 pyrcc5 img/resources.qrc -o resources_rc.py
 
