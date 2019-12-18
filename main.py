@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow
+from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QVBoxLayout, QListWidget
 
 # UI_generated
 import HelpScreen
@@ -33,12 +33,18 @@ class OpenQuickHelper(QMainWindow, QuickHelper.Ui_QuickHelper):
         self.loadingList()
 
     def loadingList(self):
-        self.lWidget = self.listWidget
-        self.listWidget.show()
+        self.list = self.listWidget
+  
 
-        ls = ['test', 'test2', 'test3']
+        for n in range(100):
+            self.list.addItem(str(n))
 
-        self.listWidget.addItems(ls)
+        self.list.itemActivated.connect(self.itemActivated_event)
+
+    def itemActivated_event(self, item):
+        print(item.text())
+
+
 
 class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
     def __init__(self):
