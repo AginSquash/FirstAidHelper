@@ -30,6 +30,9 @@ class Ui_MainWindow(object):
         self.label.setScaledContents(True)
         self.label.setWordWrap(False)
         self.label.setObjectName("label")
+        self.pushQH_button = QtWidgets.QPushButton(self.centralwidget)
+        self.pushQH_button.setGeometry(QtCore.QRect(100, 440, 181, 61))
+        self.pushQH_button.setObjectName("pushQH_button")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -42,4 +45,5 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushFAH_button.setText(_translate("MainWindow", "Get First Help Online!"))
+        self.pushQH_button.setText(_translate("MainWindow", "Get Qucik Help!"))
 import resources_rc

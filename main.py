@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow
 # UI_generated
 import HelpScreen
 import MainScreen
+import QuickHelper
 
 
 class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
@@ -13,12 +14,31 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.pushFAH_button.clicked.connect(self.OpenFAH)
+        self.pushQH_button.clicked.connect(self.OpenQH)
+
+    def OpenQH(self):
+        self.close()
+        self.QH = OpenQuickHelper()
+        self.QH.show()
 
     def OpenFAH(self):
         self.close()
         self.fah = FirstAidHelper()
         self.fah.show()
         
+class OpenQuickHelper(QMainWindow, QuickHelper.Ui_QuickHelper):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.loadingList()
+
+    def loadingList(self):
+        self.lWidget = self.listWidget
+        self.listWidget.show()
+
+        ls = ['test', 'test2', 'test3']
+
+        self.listWidget.addItems(ls)
 
 class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
     def __init__(self):

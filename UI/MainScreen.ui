@@ -67,6 +67,19 @@
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushQH_button">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>440</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Get Qucik Help!</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
