@@ -76,6 +76,9 @@
       <height>531</height>
      </rect>
     </property>
+    <property name="lineWrapMode">
+     <enum>QPlainTextEdit::WidgetWidth</enum>
+    </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">

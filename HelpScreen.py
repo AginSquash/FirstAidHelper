@@ -35,6 +35,7 @@ class Ui_MainWindow(object):
         self.adress_in.setObjectName("adress_in")
         self.symptom_in = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.symptom_in.setGeometry(QtCore.QRect(10, 180, 351, 531))
+        self.symptom_in.setLineWrapMode(QtWidgets.QPlainTextEdit.WidgetWidth)
         self.symptom_in.setObjectName("symptom_in")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(20, 20, 361, 16))

@@ -20,6 +20,7 @@ class Ui_QuickHelper(object):
         self.centralwidget.setObjectName("centralwidget")
         self.listWidget = QtWidgets.QListWidget(self.centralwidget)
         self.listWidget.setGeometry(QtCore.QRect(10, 10, 381, 701))
+        self.listWidget.setWordWrap(True)
         self.listWidget.setObjectName("listWidget")
         self.pushBackButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushBackButton.setGeometry(QtCore.QRect(10, 720, 381, 32))

@@ -10,6 +10,9 @@ import MainScreen
 import QuickHelper
 import Reader
 
+#Our framewarks
+import FileWorker
+
 class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
     def __init__(self):
         super().__init__()
@@ -49,17 +52,18 @@ class OpenQuickHelper(QMainWindow, QuickHelper.Ui_QuickHelper):
 
     def loadingList(self):
         self.list = self.listWidget
+        self.data = FileWorker.readFile()
+        for name in self.data:
+            self.list.addItem(name)
 
-        for n in range(100):
-            self.list.addItem(str(n) + " Название какой-то болезни")
+        self.list.itemActivated.connect(self.itemActivated_event )
 
-        self.list.itemActivated.connect(self.itemActivated_event)
 
     def itemActivated_event(self, item):
-        print(item.text())
-
+        
         self.close()
-        self.rd = ReaderWindow( text= item.text() )
+        self.textEdited = item.text() + "\n\n" + self.data[item.text()]
+        self.rd = ReaderWindow( text=  self.textEdited)
         self.rd.show()
 
     def toMainMenu(self):
