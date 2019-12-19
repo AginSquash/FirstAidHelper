@@ -4,6 +4,11 @@
 
 ## Установка
 Это только прототип и мы не советуем устанавливать, но для любопытных:
+
+* Скачиваем репозиторий
+
+        git clone https://github.com/AginSquash/FirstAidHelper.git
+
 * Устанавливаем все зависимости
 
         pip3 install -r requirements.txt
