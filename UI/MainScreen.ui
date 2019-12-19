@@ -32,14 +32,22 @@
    <widget class="QPushButton" name="pushFAH_button">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>170</y>
-      <width>201</width>
-      <height>171</height>
+      <x>97</x>
+      <y>165</y>
+      <width>180</width>
+      <height>180</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <kerning>true</kerning>
+     </font>
     </property>
     <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
@@ -49,19 +57,28 @@
     </property>
     <property name="icon">
      <iconset resource="../img/resources.qrc">
-      <normaloff>:/newPrefix/void.png</normaloff>
-      <normalon>:/newPrefix/void.png</normalon>
-      <selectedoff>:/newPrefix/void.png</selectedoff>
-      <selectedon>:/newPrefix/void.png</selectedon>:/newPrefix/void.png</iconset>
+      <normaloff>:/newPrefix/void.png</normaloff>:/newPrefix/void.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>170</width>
+      <height>170</height>
+     </size>
+    </property>
+    <property name="shortcut">
+     <string/>
     </property>
     <property name="checkable">
      <bool>false</bool>
     </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
     <property name="autoDefault">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="default">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="flat">
      <bool>true</bool>

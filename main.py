@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5 import QtGui, QtWidgets, QtCore #import QPixmap
+from PyQt5 import QtGui, QtWidgets, QtCore 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QListWidget
 from PyQt5.Qt import pyqtSignal, QLabel
 
@@ -24,7 +24,6 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
         self.QH.show()
 
     def OpenFAH(self):
-        print("OK!")
         self.close()
         self.fah = FirstAidHelper()
         self.fah.show()
@@ -96,7 +95,6 @@ class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
         btn.clicked.connect(self.goBack)
         btn.setGeometry(QtCore.QRect(0, 350, 375, 60))
         btn.show()
-        #self.goBack()
 
     def goBack(self):
         self.close()

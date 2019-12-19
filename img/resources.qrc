@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>range.png</file>
     <file>void.png</file>
     <file>black-magic.gif</file>
     <file>persik.jpg</file>
