@@ -52,7 +52,7 @@ class RegisterWindow(QMainWindow, Register.Ui_registorWindow):
 
     def register(self):
         self.name = self.lineName.text()
-        self.symptom = self.lineSymptoms.text()
+        self.symptom = self.lineSymptoms.toPlainText()
 
         FileWorker.outputdate("config.txt", name= self.name, age=18, comment=self.symptom )
         self.toMainMenu()
