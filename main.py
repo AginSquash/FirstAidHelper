@@ -107,6 +107,8 @@ class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.data = FileWorker.inputdate("config.txt")
+        self.name_in.setPlainText(self.data[0])
         self.button_goBack.clicked.connect(self.goBack)
         self.button.clicked.connect(self.CreateRequest)
 

@@ -31,6 +31,7 @@ class Ui_MainWindow(object):
         self.name_in.setGeometry(QtCore.QRect(10, 40, 351, 31))
         self.name_in.setObjectName("name_in")
         self.adress_in = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.adress_in.setEnabled(False)
         self.adress_in.setGeometry(QtCore.QRect(10, 110, 351, 31))
         self.adress_in.setObjectName("adress_in")
         self.symptom_in = QtWidgets.QPlainTextEdit(self.centralwidget)
@@ -61,6 +62,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Вызов помощи"))
         self.button.setText(_translate("MainWindow", "Отправить"))
+        self.adress_in.setPlainText(_translate("MainWindow", "Moscow, Vadkovsky per. 1"))
         self.label.setText(_translate("MainWindow", "Ваше Имя:"))
         self.label_2.setText(_translate("MainWindow", "Ваш адрес:"))
         self.label_3.setText(_translate("MainWindow", "Опишите, что с вами произошло:"))
