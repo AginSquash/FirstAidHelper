@@ -83,6 +83,7 @@ class OpenQuickHelper(QMainWindow, QuickHelper.Ui_QuickHelper):
         self.pushBackButton.clicked.connect(self.toMainMenu)
 
     def loadingList(self):
+#fix by sershhka
         self.list = self.listWidget
         self.data = FileWorker.readFile()
         for name in self.data:
@@ -117,6 +118,7 @@ class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
         adress = self.adress_in.toPlainText()
         symptom = self.symptom_in.toPlainText()
 
+#json structure by sershhka
         json_request = '''
         {
             "name": $name,
