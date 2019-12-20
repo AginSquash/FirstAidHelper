@@ -9,6 +9,7 @@ import HelpScreen
 import MainScreen
 import QuickHelper
 import Reader
+import Register
 
 #Our framewarks
 import FileWorker
@@ -30,6 +31,11 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
         self.close()
         self.fah = FirstAidHelper()
         self.fah.show()
+
+class RegisterWindow(QMainWindow, Register.Ui_registorWindow):
+     def __init__(self, text):
+        super().__init__()
+        self.setupUi(self)
 
 class ReaderWindow(QMainWindow, Reader.Ui_Reader):
     def __init__(self, text):
