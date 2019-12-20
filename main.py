@@ -22,6 +22,18 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
         self.pushFAH_button.clicked.connect(self.OpenFAH)
         self.pushQH_button.clicked.connect(self.OpenQH)
 
+        self.loadData = FileWorker.inputdate("config.txt")
+        if self.loadData == False:
+            self.OpenReg()
+        else:
+            self.show()
+
+
+    def OpenReg(self):
+        self.close()
+        self.reg = RegisterWindow()
+        self.reg.show()
+
     def OpenQH(self):
         self.close()
         self.QH = OpenQuickHelper()
@@ -33,9 +45,23 @@ class MainMenu(QMainWindow, MainScreen.Ui_MainWindow):
         self.fah.show()
 
 class RegisterWindow(QMainWindow, Register.Ui_registorWindow):
-     def __init__(self, text):
+    def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.register_button.clicked.connect(self.register)
+
+    def register(self):
+        self.name = self.lineName.text()
+        self.symptom = self.lineSymptoms.text()
+
+        FileWorker.outputdate("config.txt", name= self.name, age=18, comment=self.symptom )
+        self.toMainMenu()
+
+
+    def toMainMenu(self):
+        self.close()
+        self.mainmenu = MainMenu()
+        self.mainmenu.show()
 
 class ReaderWindow(QMainWindow, Reader.Ui_Reader):
     def __init__(self, text):
@@ -114,7 +140,7 @@ class FirstAidHelper(QMainWindow, HelpScreen.Ui_MainWindow):
 def main():
     app = QApplication(sys.argv)
     window = MainMenu()
-    window.show()
+    #window.show()
     app.exec()
 
 if __name__ == '__main__':

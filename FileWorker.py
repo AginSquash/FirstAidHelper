@@ -1,15 +1,16 @@
+import locale
+import os.path
+#locale.setlocale(locale.LC_ALL,"ru")
 
 def readFile():
     sympotms_dict = {}
-    #f = open('FIRSTAIDHELPER.txt')
     with open("FIRSTAIDHELPER.txt", encoding='utf-8') as file:
         for line in file:
             data = line.split("-", maxsplit=1)
             sympotms_dict[data[0]] = data[1]
     return sympotms_dict
-import locale
-import os.path
-locale.setlocale(locale.LC_ALL,"ru")
+
+
 def inputdate(filename):
 	if(os.path.isfile(filename)):
 		handle = open(filename,'r',encoding='utf-8')
@@ -44,13 +45,3 @@ def Find(filename,findobject):
 					returnstring+=line[i]
 		if(returnstring !=""):
 			return returnstring
-		#print(findstring)
-
-	
-name,age,comment = inputdate("input.txt")
-print(name,age,comment)
-print(Find("output.txt",'болезнь3'))
-outputdate("input.txt","Vasya",18,"Vvedenie v specialnost")
-
-
-
